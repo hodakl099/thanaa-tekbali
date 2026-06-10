@@ -38,6 +38,7 @@ export const CONTENT: Record<Language, Content> = {
     encouragement: {
       label: "Before you go",
       title: "You're ready for this",
+      revealLabel: "Open the gift",
       items: [
         "Future doctor loading",
         "You've got this!",
@@ -87,6 +88,7 @@ export const CONTENT: Record<Language, Content> = {
     encouragement: {
       label: "قبل أن تذهبوا",
       title: "أنتم جاهزون لهذا",
+      revealLabel: "افتحوا الهدية",
       items: [
         "Future doctor loading",
         "You've got this!",

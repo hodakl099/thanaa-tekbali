@@ -34,6 +34,8 @@ export interface Content {
   encouragement: {
     label: string;
     title: string;
+    /** Label on the tap-to-reveal "gift" button. */
+    revealLabel: string;
     /** Stylistic English motivational "stickers" — kept in English in both languages. */
     items: string[];
   };

@@ -115,6 +115,28 @@
       }
       .scroll-bob { animation: scrollBob 2s ease-in-out infinite; }
 
+      /* Reveal: staggered pop-in for the encouragement cards */
+      @keyframes popIn {
+        0% { opacity: 0; transform: translateY(18px) scale(0.85); }
+        60% { opacity: 1; transform: translateY(-3px) scale(1.03); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .pop-in { animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+      /* "Tap me" pulsing ring on the gift button */
+      @keyframes invitePulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(154, 121, 186, 0.4); }
+        50% { box-shadow: 0 0 0 14px rgba(154, 121, 186, 0); }
+      }
+      .invite-pulse { animation: invitePulse 2.2s ease-out infinite; }
+
+      /* One-shot sparkle twinkle on reveal */
+      @keyframes sparkleTwinkle {
+        0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+        50% { opacity: 1; transform: scale(1) rotate(18deg); }
+      }
+      .sparkle-twinkle { animation: sparkleTwinkle 1.5s ease-in-out both; }
+
       /* ── Respect reduced-motion: keep fades, drop ambient/looping motion ── */
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
@@ -123,7 +145,10 @@
         .tooth-drift,
         .heart-pulse,
         .mote-float,
-        .scroll-bob {
+        .scroll-bob,
+        .invite-pulse,
+        .pop-in,
+        .sparkle-twinkle {
           animation: none !important;
         }
       }
